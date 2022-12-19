@@ -1,11 +1,13 @@
 :root {
-    --accent-color: #4D5AE5;
+    
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --primary-text-color: #2E2F42;
     --secondary-text-color: #434455;
     --background-color: #2E2F42;
     --base-color: #FFFFFF;
+    --accent-color: #4D5AE5;
+    --next-color: #404BBF;
 }
              
 h1,
@@ -194,7 +196,7 @@ border: transparent;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .primary-btn:focus {
-    background: #404BBF;
+    background: var(--next-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -234,23 +236,27 @@ color: var(--primary-text-color);
 
 }
 
-.features-list-item:{
+ .features-list-item {
 width: 264px;
 align-items: center;
-}
-.features-list-item::before {
-    display: block;
-    content: "";
-    height: 112px;
+
+} 
+
+.features-decor {
+    
+    height: 112px; 
     margin-bottom: 8px;
     border-radius: 4px;
-    outline: 1px solid red;
-    /* background-image: url("../images/icon/antenna.svg");  */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #F4F4FD;
     
+}
+
+.features-icon { 
+    width: 64px;
+    height: 64px;     
 }
 
 .subject {
@@ -333,6 +339,36 @@ color: var(--secondary-text-color);
     padding: 32px 16px;
 }
 
+.team-social.list {
+    display: flex;
+    
+    height: 48px;
+    width: 232px;
+    gap: 24px;
+    align-items: center;
+}
+
+.team-icons {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;  
+} 
+
+.team-icon {
+  box-sizing: border-box;
+  padding: 12px;
+  min-width: 100%;
+    height: auto;
+}
+
+.team-icons:hover {
+    background-color: var(--next-color);
+}
+.team-icons:focus {
+    background-color: var(--next-color);
+}
 /* -------CUSTOMERS-------- */
 
 .customers {
@@ -345,17 +381,36 @@ color: var(--secondary-text-color);
     gap: 24px;
 }
 
-.customers-item {
-    display: block;
+
+.customers-icons {
+    display: flex;
     width: 168px;
-    height: 88px;
+    height: 88px; 
     padding: 16px 32px;
-    outline: 1px solid red;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../images/symbol-defs.svg#icon-client1);
-    background-color: ;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+   color: #8E8F99;
+    justify-content: center;
+       
 }
+
+.customers-icon { 
+    display: flex;
+    width: 104px;
+    height: 88px;
+    fill: currentColor;
+    min-width: 100%;
+    height: auto;
+}
+
+.customers-icons:hover {
+   border: 1px solid var(--next-color);
+}
+
+.customers-icon:hover {
+    fill: var(--next-color);
+}
+
 
 
 /*------ PROJECTS--------*/
@@ -377,7 +432,7 @@ color: var(--secondary-text-color);
     color: var(--accent-color);
     background: #F4F4FD;
     border: 1px solid #E7E9FC;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    
     border-radius: 4px;
 }
 .projects-btn:hover,
@@ -385,6 +440,7 @@ color: var(--secondary-text-color);
     color: var(--base-color);
     background: var(--accent-color);
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .visually-hidden {
     position: absolute;
@@ -431,6 +487,10 @@ color: var(--secondary-text-color);
 }
 .projects-link {
     display: block;
+    
+}
+
+.projects-link:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -438,6 +498,15 @@ color: var(--secondary-text-color);
 /* --------Footer-------- */
 .footer {
     background: var(--background-color);
+    display: ;
+}
+
+.footer-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--base-color);
 }
 .footer-text {
     max-width: 264px;
@@ -454,4 +523,31 @@ color: #E7E9FC;
 .footer .container {
     padding-top: 100px;   
     padding-bottom: 100px;
+    display: flex;
+    gap: 120px;
+}
+
+.footer-social .list {
+    display: flex;
+    height: 48px;
+    width: 232px;
+    gap: 24px;
+    align-items: center;
+}
+
+.footer-icons {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255,255, 0.1);
+    border-radius: 50%;  
+} 
+
+.footer-icon {
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.footer-icons:hover {
+    background-color: #31D0AA;
 }
