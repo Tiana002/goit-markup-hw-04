@@ -153,7 +153,6 @@ margin-left: auto;
     text-align: center;
     background: var(--background-color);
     max-width: 1440px;
-    height: 600px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-size: cover;
@@ -182,7 +181,7 @@ letter-spacing: 0.04em;
 cursor: pointer;
 color: var(--base-color);
 background: var(--accent-color);
-
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 margin-top: 48px;
 padding: 16px 32px;
 min-width: 170px;
@@ -396,7 +395,8 @@ color: var(--secondary-text-color);
     width: 104px;
     height: 88px;
     fill: currentColor;
-   
+    max-width: 100%;
+    height: auto;
 }
 
 .customers-icons:hover,
@@ -483,11 +483,11 @@ color: var(--secondary-text-color);
 }
 .projects-link {
     display: block;
-    
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .projects-link:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
 }
 
 
