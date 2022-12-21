@@ -338,9 +338,7 @@ color: var(--secondary-text-color);
 
 .team-social.list {
     display: flex;
-    margin-top: 8px;
-    height: 48px;
-    width: 232px;
+    margin-top: 12px;
     gap: 24px;
     align-items: center;
 }
@@ -526,9 +524,7 @@ color: #E7E9FC;
 
 .footer-social .list {
     display: flex;
-    height: 48px;
-    width: 232px;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
 }
 
